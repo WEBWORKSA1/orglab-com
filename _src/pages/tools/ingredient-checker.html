@@ -1,0 +1,43 @@
+---
+title: Organic Ingredient Checker — Is It Allowed in Organic Food? | OrgLab
+description: Paste any ingredient list to see which ingredients are prohibited, conditional or allowed in USDA certified organic products. Free tool for shoppers and food brands.
+crumb: Ingredient Checker
+scripts: tools
+exit: 1
+priority: 0.85
+---
+<main id="main">
+<section class="page-hero"><div class="container">
+  <div class="crumbs"><a href="{{BASE}}index.html">Home</a> / <a href="{{BASE}}tools/index.html">Tools</a> / Ingredient Checker</div>
+  <span class="eyebrow">Tool · For shoppers & food brands</span>
+  <h1>Organic Ingredient Checker</h1>
+  <p class="lead">Paste an ingredient list. We flag every ingredient as not permitted, allowed with conditions or allowed, based on the USDA National List.</p>
+</div></section>
+<section class="section"><div class="container">
+  <div class="tool" id="ingredient-checker">
+    <div>
+      <label for="ing-ta">Ingredient list</label>
+      <textarea id="ing-ta" style="min-height:170px" placeholder="Ingredients: organic oats, cane sugar, sunflower oil, natural flavor, sea salt, mixed tocopherols…"></textarea>
+      <div class="row" style="margin-top:10px">
+        <small>Try a sample:</small>
+        <button class="chip" type="button" data-sample="Organic rolled oats, organic cane sugar, organic sunflower oil, organic honey, sea salt, baking soda, mixed tocopherols">Organic granola</button>
+        <button class="chip" type="button" data-sample="Enriched flour, sugar, high fructose corn syrup, soybean oil, modified corn starch, natural and artificial flavors, Red 40, sodium benzoate, TBHQ">Snack cake</button>
+        <button class="chip" type="button" data-sample="Organic oat base (water, organic oats), organic sunflower oil, calcium carbonate, sea salt, gellan gum, vitamin D2">Oat milk</button>
+      </div>
+      <div id="ing-out" style="margin-top:20px" aria-live="polite"></div>
+    </div>
+    <aside>
+      <div class="result" id="ing-sum"></div>
+      <div class="card" style="margin-top:18px"><span class="tag new">For brands</span><h3 style="margin-top:8px">Reformulating for organic?</h3><p>Our certification partners review formulations and labels before you apply.</p><a class="btn btn-accent btn-block" href="{{BASE}}get-certified.html?type=brand#quote">Get a free formulation review</a></div>
+      <div class="ad ad-rect" data-slot="sidebar">Advertisement</div>
+    </aside>
+  </div>
+  <p class="form-note" style="margin-top:20px">Simplified guidance based on 7 CFR 205.605–205.606. Some conditions (source, processing method, commercial availability) need certifier verification. This is not legal or regulatory advice.</p>
+</div></section>
+<section class="section alt"><div class="container" style="max-width:860px">
+  <h2>How organic ingredient rules work</h2>
+  <p>In a product labeled “Organic”, at least 95% of ingredients (excluding salt and water) must be certified organic. The remaining 5% may only come from the <b>National List</b>: approved non-agricultural substances such as baking soda or pectin, plus specific non-organic agricultural ingredients that aren't commercially available in organic form.</p>
+  <details class="faq"><summary>Why is “natural flavor” conditional?</summary><div>Natural flavors are allowed only if they're produced without synthetic solvents, carriers or preservatives. Certifiers also require organic flavors when they're commercially available.</div></details>
+  <details class="faq"><summary>Is carrageenan allowed in organic?</summary><div>Yes, it's currently on the National List. Some brands avoid it because of consumer concerns, so we flag it as conditional.</div></details>
+</div></section>
+</main>

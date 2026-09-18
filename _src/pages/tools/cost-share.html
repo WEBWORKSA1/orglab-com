@@ -1,0 +1,31 @@
+---
+title: Organic Certification Cost-Share Reimbursement Checker | OrgLab
+description: Estimate how much of your organic certification cost you can get reimbursed through the USDA Organic Certification Cost Share Program (up to 75%, max $750 per scope).
+crumb: Cost-Share Checker
+scripts: tools
+exit: 1
+priority: 0.85
+---
+<main id="main">
+<section class="page-hero"><div class="container">
+  <div class="crumbs"><a href="{{BASE}}index.html">Home</a> / <a href="{{BASE}}tools/index.html">Tools</a> / Cost-Share Checker</div>
+  <span class="eyebrow">Tool · Get money back</span>
+  <h1>Cost-Share Reimbursement Checker</h1>
+  <p class="lead">Many certified operations leave this money unclaimed. Enter what you paid per certification scope to estimate your reimbursement.</p>
+</div></section>
+<section class="section"><div class="container">
+  <div class="tool" id="costshare">
+    <form class="card form" onsubmit="return false">
+      <p class="form-note">Tick each scope you're certified for and enter the eligible costs you paid (application, inspection and annual fees).</p>
+      <div class="row" data-scope="Crops"><label class="check" style="flex:1"><input type="checkbox" checked> Crops</label><input type="number" min="0" value="1400" aria-label="Crop certification cost" style="width:140px"></div>
+      <div class="row" data-scope="Livestock"><label class="check" style="flex:1"><input type="checkbox"> Livestock</label><input type="number" min="0" value="1200" aria-label="Livestock certification cost" style="width:140px"></div>
+      <div class="row" data-scope="Wild crops"><label class="check" style="flex:1"><input type="checkbox"> Wild crops</label><input type="number" min="0" value="600" aria-label="Wild crop certification cost" style="width:140px"></div>
+      <div class="row" data-scope="Handling"><label class="check" style="flex:1"><input type="checkbox"> Handling / processing</label><input type="number" min="0" value="1600" aria-label="Handling certification cost" style="width:140px"></div>
+      <div class="row" data-scope="State organic program fee"><label class="check" style="flex:1"><input type="checkbox"> State organic program fee</label><input type="number" min="0" value="300" aria-label="State program fee" style="width:140px"></div>
+    </form>
+    <div class="result" id="cs-out" aria-live="polite"></div>
+  </div>
+  <div class="ad ad-leader" data-slot="incontent">Advertisement</div>
+  <div class="card"><h3>How to apply</h3><ol><li>Keep invoices and receipts from your certifier.</li><li>Apply through your state department of agriculture or your local USDA Farm Service Agency office before the program-year deadline.</li><li>Submit your certificate plus proof of payment. The reimbursement is paid to you directly.</li></ol><a class="btn btn-accent" href="{{BASE}}learn/organic-certification-cost-share.html">Read the full cost-share guide</a></div>
+</div></section>
+</main>

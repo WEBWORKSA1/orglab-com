@@ -1,0 +1,43 @@
+---
+title: Organic Certification Cost Estimator (Free Calculator) | OrgLab
+description: How much does organic certification cost? Estimate first-year USDA organic certification fees by operation type, sales and number of sites, minus cost-share reimbursement.
+crumb: Certification Cost Estimator
+scripts: tools
+exit: 1
+priority: 0.95
+---
+<main id="main">
+<section class="page-hero"><div class="container">
+  <div class="crumbs"><a href="{{BASE}}index.html">Home</a> / <a href="{{BASE}}tools/index.html">Tools</a> / Certification Cost</div>
+  <span class="eyebrow">Tool · Farms, brands & processors</span>
+  <h1>Organic Certification Cost Estimator</h1>
+  <p class="lead">A realistic first-year cost range in 60 seconds, built from published certifier fee structures and net of cost-share.</p>
+</div></section>
+<section class="section"><div class="container">
+  <div class="tool" id="cert-estimator">
+    <form class="card form" onsubmit="return false">
+      <div><label for="ce-type">Operation type</label><select id="ce-type" name="type"><option value="crop">Crop farm</option><option value="livestock">Livestock / dairy</option><option value="handler">Processor / handler</option><option value="brand">Brand / private label</option><option value="wild">Wild crop harvest</option><option value="retail">Retail / restaurant</option></select></div>
+      <div><label for="ce-sales">Annual organic sales</label><select id="ce-sales" name="sales"><option value="25">Under $25k</option><option value="100" selected>$25k – $100k</option><option value="250">$100k – $250k</option><option value="1000">$250k – $1M</option><option value="5000">$1M – $5M</option><option value="5001">$5M+</option></select></div>
+      <div><label for="ce-sites">Number of sites / facilities</label><input id="ce-sites" type="number" name="sites" min="1" max="50" value="1"></div>
+      <fieldset style="border:0;padding:0;margin:0"><legend style="font-weight:600;font-size:.92rem;margin-bottom:6px">Add-on standards</legend>
+        <div class="choice-grid">
+          <label class="check"><input type="checkbox" name="addon" value="cor"> Canada COR</label>
+          <label class="check"><input type="checkbox" name="addon" value="eu"> EU Organic</label>
+          <label class="check"><input type="checkbox" name="addon" value="roc"> Regenerative Organic</label>
+          <label class="check"><input type="checkbox" name="addon" value="grass"> Grass-fed</label>
+        </div>
+      </fieldset>
+      <label class="check"><input type="checkbox" name="expedite"> I need expedited certification</label>
+    </form>
+    <div class="result" id="cert-out" aria-live="polite"></div>
+  </div>
+  <div class="ad ad-leader" data-slot="incontent">Advertisement</div>
+</div></section>
+<section class="section alt"><div class="container" style="max-width:860px">
+  <h2>What drives your certification cost</h2>
+  <p><b>1. Annual fee by sales:</b> most certifiers scale the annual fee with gross organic sales, so it's the biggest variable for growing brands. <b>2. Inspection:</b> billed hourly or flat, plus travel, and more sites mean more time. <b>3. Complexity:</b> multiple scopes, co-packers, imports and add-on standards all add review time.</p>
+  <details class="faq"><summary>Is the estimate a quote?</summary><div>No. It's an indicative range. Fees differ a lot between certifiers, which is why comparing 2–3 quotes usually saves money.</div></details>
+  <details class="faq"><summary>How can I lower my costs?</summary><div>Apply for cost-share, keep records clean to avoid re-inspections, combine standards in a single inspection, and pick a certifier with inspectors near you to cut travel charges.</div></details>
+  <div class="grid g2" style="margin-top:24px"><a class="card card-link" href="cost-share.html"><h3>Cost-Share Checker →</h3><p>Estimate your reimbursement.</p></a><a class="card card-link" href="transition-roi.html"><h3>Transition ROI →</h3><p>Model 10-year profitability.</p></a></div>
+</div></section>
+</main>

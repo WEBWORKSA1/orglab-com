@@ -1,0 +1,29 @@
+---
+title: Organic Planting Calendar by Zone — When to Plant 30 Vegetables | OrgLab
+description: Free planting calendar by USDA hardiness zone or last frost date. See when to start seeds indoors, direct sow, transplant and harvest 30 vegetables and herbs.
+crumb: Planting Calendar
+scripts: tools
+priority: 0.85
+---
+<main id="main">
+<section class="page-hero"><div class="container">
+  <div class="crumbs"><a href="{{BASE}}index.html">Home</a> / <a href="{{BASE}}tools/index.html">Tools</a> / Planting Calendar</div>
+  <span class="eyebrow">Tool · Home & market gardeners</span>
+  <h1>Planting Calendar</h1>
+  <p class="lead">Pick your zone, or enter your own last-frost date, to get start, sow, transplant and harvest months for 30 crops.</p>
+</div></section>
+<section class="section"><div class="container" id="planting-calendar">
+  <form class="card form" onsubmit="return false" style="margin-bottom:20px">
+    <div class="two">
+      <div><label for="pc-zone">USDA hardiness zone</label><select id="pc-zone" name="zone"><option value="3">Zone 3</option><option value="4">Zone 4</option><option value="5">Zone 5</option><option value="6" selected>Zone 6</option><option value="7">Zone 7</option><option value="8">Zone 8</option><option value="9">Zone 9</option><option value="10">Zone 10</option></select></div>
+      <div><label for="pc-lf">…or your exact last frost date (overrides zone)</label><input id="pc-lf" type="date" name="lastfrost"></div>
+    </div>
+    <p class="form-note" id="cal-info" aria-live="polite"></p>
+  </form>
+  <div class="legend"><span><i style="background:rgba(183,227,90,.55)"></i>Start indoors (“in”) / direct sow</span><span><i style="background:rgba(29,107,82,.45)"></i>Transplant outdoors</span><span><i style="background:rgba(242,179,61,.55)"></i>Harvest</span></div>
+  <div class="table-wrap"><div class="cal" id="cal-grid"></div></div>
+  <p class="form-note" style="margin-top:10px">Frost dates are zone averages. Local microclimates vary by 2–3 weeks. Southern-hemisphere users: enter your own frost date.</p>
+  <div class="ad ad-leader" data-slot="incontent">Advertisement</div>
+  <div class="grid g2"><a class="card card-link" href="compost-calculator.html"><h3>Compost Mixer →</h3><p>Build fertile soil before you plant.</p></a><a class="card card-link" href="{{BASE}}learn/organic-gardening-for-beginners.html"><h3>Organic Gardening 101 →</h3><p>Soil, compost, pests & more.</p></a></div>
+</div></section>
+</main>

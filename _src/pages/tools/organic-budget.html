@@ -1,0 +1,36 @@
+---
+title: Organic Budget Planner — Eat Organic for Less | OrgLab
+description: How much more does organic food cost? Compare all-organic vs a smart organic strategy (organic only for high-residue produce) and see your yearly savings.
+crumb: Organic Budget Planner
+scripts: tools
+priority: 0.8
+---
+<main id="main">
+<section class="page-hero"><div class="container">
+  <div class="crumbs"><a href="{{BASE}}index.html">Home</a> / <a href="{{BASE}}tools/index.html">Tools</a> / Budget Planner</div>
+  <span class="eyebrow">Tool · Household budget</span>
+  <h1>Organic Budget Planner</h1>
+  <p class="lead">Going 100% organic is expensive. Going organic where it counts isn't. See the numbers for your household.</p>
+</div></section>
+<section class="section"><div class="container">
+  <div class="tool" id="budget-planner">
+    <form class="card form" onsubmit="return false">
+      <div><label for="bp-spend">Weekly produce spend, conventional ($): <b data-v="spend"></b></label><input id="bp-spend" name="spend" type="range" min="10" max="300" step="5" value="60" style="width:100%"></div>
+      <div><label for="bp-prem">Average organic price premium: <b data-v="premium" data-unit="%"></b></label><input id="bp-prem" name="premium" type="range" min="10" max="120" step="5" value="45" style="width:100%"></div>
+      <div><label for="bp-hi">Share of your produce that is high-risk: <b data-v="highshare" data-unit="%"></b></label><input id="bp-hi" name="highshare" type="range" min="10" max="80" step="5" value="40" style="width:100%"></div>
+      <div class="two">
+        <div><label for="bp-dairy">Weekly dairy spend ($)</label><input id="bp-dairy" name="dairy" type="number" min="0" value="20"></div>
+        <div><label for="bp-meat">Weekly meat spend ($)</label><input id="bp-meat" name="meat" type="number" min="0" value="35"></div>
+      </div>
+      <p class="form-note">The high-risk share is the part of your basket made up of items like strawberries, spinach, apples and grapes. See the <a href="pesticide-residue.html">residue guide</a>.</p>
+    </form>
+    <div class="result" id="budget-out" aria-live="polite"></div>
+  </div>
+  <div class="ad ad-leader" data-slot="incontent">Advertisement</div>
+  <div class="grid g3">
+    <div class="card"><h3>🥬 Buy in season</h3><p>In-season organic produce often costs close to conventional, especially at farmers' markets.</p></div>
+    <div class="card"><h3>🧊 Go frozen</h3><p>Frozen organic berries and spinach cost much less than fresh and keep their nutrients.</p></div>
+    <div class="card"><h3>🧺 Join a CSA</h3><p>A farm share can cut the cost per pound. <a href="{{BASE}}directory.html">Find one near you</a>.</p></div>
+  </div>
+</div></section>
+</main>

@@ -1,0 +1,42 @@
+---
+title: Transition to Organic ROI Calculator for Farms | OrgLab
+description: Is converting to organic profitable? Model 10 years of farm income with the 36-month transition, yield drag, organic price premium and certification costs.
+crumb: Transition ROI
+scripts: tools
+exit: 1
+priority: 0.85
+---
+<main id="main">
+<section class="page-hero"><div class="container">
+  <div class="crumbs"><a href="{{BASE}}index.html">Home</a> / <a href="{{BASE}}tools/index.html">Tools</a> / Transition ROI</div>
+  <span class="eyebrow">Tool · Farm economics</span>
+  <h1>Transition-to-Organic ROI Calculator</h1>
+  <p class="lead">During the 36-month transition you carry organic costs without organic prices. See when, or whether, the premium pays you back.</p>
+</div></section>
+<section class="section"><div class="container">
+  <div class="tool" id="transition-roi">
+    <form class="card form" onsubmit="return false">
+      <div class="two">
+        <div><label for="tr-acres">Acres</label><input id="tr-acres" name="acres" type="number" min="1" value="100"></div>
+        <div><label for="tr-years">Transition years</label><select id="tr-years" name="years"><option value="3" selected>3 (standard)</option><option value="2">2</option><option value="1">1 (partially transitioned)</option><option value="0">0 (already eligible)</option></select></div>
+      </div>
+      <div class="two">
+        <div><label for="tr-yield">Conventional yield (units/acre)</label><input id="tr-yield" name="yield" type="number" min="0" value="180"></div>
+        <div><label for="tr-price">Conventional price ($/unit)</label><input id="tr-price" name="price" type="number" min="0" step="0.01" value="4.50"></div>
+      </div>
+      <div><label for="tr-prem">Organic price premium: <b data-v="premium" data-unit="%"></b></label><input id="tr-prem" name="premium" type="range" min="0" max="200" step="5" value="90" style="width:100%"></div>
+      <div><label for="tr-drag">Organic yield drag: <b data-v="drag" data-unit="%"></b></label><input id="tr-drag" name="drag" type="range" min="0" max="50" step="1" value="18" style="width:100%"></div>
+      <div class="two">
+        <div><label for="tr-cost">Conventional cost ($/acre)</label><input id="tr-cost" name="cost" type="number" min="0" value="520"></div>
+        <div><label for="tr-dcost">Organic cost change (%)</label><input id="tr-dcost" name="dcost" type="number" min="-50" max="100" value="10"></div>
+      </div>
+      <div><label for="tr-cert">Annual certification cost ($)</label><input id="tr-cert" name="cert" type="number" min="0" value="1800"></div>
+      <p class="form-note">Defaults are illustrative (a corn-like field crop). Replace them with your own budget numbers.</p>
+    </form>
+    <div class="result" id="roi-out" aria-live="polite"></div>
+  </div>
+  <h3 style="margin-top:30px">Year-by-year</h3>
+  <div class="table-wrap"><table><thead><tr><th>Year</th><th>Conventional net</th><th>Organic net</th><th>Difference</th><th>Cumulative</th></tr></thead><tbody id="roi-table"></tbody></table></div>
+  <div class="ad ad-leader" data-slot="incontent">Advertisement</div>
+</div></section>
+</main>

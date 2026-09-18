@@ -1,0 +1,28 @@
+---
+title: Organic Label Decoder — 16 Eco-Labels Scored & Compared | OrgLab
+description: USDA Organic vs Non-GMO vs Regenerative Organic vs “Natural”. 16 food, cosmetic and textile labels scored for strictness, with a side-by-side comparison tool.
+crumb: Label Decoder
+scripts: tools
+priority: 0.85
+---
+<main id="main">
+<section class="page-hero"><div class="container">
+  <div class="crumbs"><a href="{{BASE}}index.html">Home</a> / <a href="{{BASE}}tools/index.html">Tools</a> / Label Decoder</div>
+  <span class="eyebrow">Tool · Label intelligence</span>
+  <h1>Which labels actually mean something?</h1>
+  <p class="lead">16 food, cosmetic and textile labels scored 1–10 for strictness, with a plain-English breakdown of what each one guarantees and what it misses.</p>
+</div></section>
+<section class="section"><div class="container" id="label-decoder">
+  <div class="card">
+    <h2 style="font-size:1.5rem">⚖️ Compare two labels</h2>
+    <div class="row"><select id="cmp-a" aria-label="Label A" style="flex:1 1 220px"></select><strong>vs</strong><select id="cmp-b" aria-label="Label B" style="flex:1 1 220px"></select><button class="btn btn-sm btn-ghost" type="button" data-share>Share</button></div>
+    <div id="cmp-out" style="margin-top:18px" aria-live="polite"></div>
+  </div>
+  <div class="ad ad-leader" data-slot="incontent">Advertisement</div>
+  <div data-label-filter>
+    <div class="filters"><input type="search" data-filter-q placeholder="Filter labels…" aria-label="Filter labels"><span class="muted" data-filter-count>16 labels</span></div>
+    <div class="grid g3" id="label-grid"></div>
+  </div>
+</div></section>
+</main>
+<script>document.addEventListener("DOMContentLoaded",function(){setTimeout(function(){var w=document.querySelector("[data-label-filter]"),q=w&&w.querySelector("[data-filter-q]");if(q)q.addEventListener("input",function(){var t=q.value.toLowerCase(),n=0;w.querySelectorAll("#label-grid [data-item]").forEach(function(i){var s=i.textContent.toLowerCase().indexOf(t)>-1;i.classList.toggle("hide",!s);if(s)n++});w.querySelector("[data-filter-count]").textContent=n+" labels"})},50)});</script>

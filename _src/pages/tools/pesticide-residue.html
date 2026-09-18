@@ -1,0 +1,46 @@
+---
+title: Pesticide Residue Risk Guide — Which Produce to Buy Organic | OrgLab
+description: Which fruits and vegetables should you buy organic? 45 produce items rated High, Moderate or Low for pesticide residue risk, with a printable smart shopping list.
+crumb: Pesticide Residue Guide
+scripts: tools
+exit: 1
+priority: 0.9
+---
+<main id="main">
+<section class="page-hero"><div class="container">
+  <div class="crumbs"><a href="{{BASE}}index.html">Home</a> / <a href="{{BASE}}tools/index.html">Tools</a> / Residue Guide</div>
+  <span class="eyebrow">Tool · Updated {{TODAY}}</span>
+  <h1>Pesticide Residue Risk Guide</h1>
+  <p class="lead">Spend your organic budget where it matters most. 45 fruits and vegetables rated by typical residue load in conventional produce.</p>
+</div></section>
+<section class="section"><div class="container">
+  <div class="tool">
+    <div>
+      <div class="filters">
+        <input id="residue-q" type="search" placeholder="Search produce…" aria-label="Search produce">
+        <select id="residue-f" aria-label="Risk level"><option value="">All risk levels</option><option value="high">High</option><option value="moderate">Moderate</option><option value="low">Low</option></select>
+      </div>
+      <div class="table-wrap"><table><thead><tr><th>Produce</th><th>Risk</th><th>Verdict</th><th>Why</th></tr></thead><tbody id="residue-table"></tbody></table></div>
+    </div>
+    <aside>
+      <div class="result" id="shop-print">
+        <h3>🛒 My smart organic list</h3>
+        <ul class="list-clean" id="shop-list"></ul>
+        <div class="row no-print" style="margin-top:14px"><button class="btn btn-sm" type="button" data-print>Print</button><button class="btn btn-sm btn-ghost" type="button" data-copy="#shop-list">Copy</button><button class="btn btn-sm btn-ghost" type="button" id="shop-clear">Clear</button></div>
+      </div>
+      <div class="ad ad-rect" data-slot="sidebar">Advertisement</div>
+      <div class="card" style="margin-top:18px"><h3>Get the yearly update</h3><p>We email the refreshed risk list every spring.</p>
+        <form class="inline-form" data-form="newsletter-residue" data-success="You're on the list!"><input type="email" name="email" required placeholder="Email" aria-label="Email"><button class="btn btn-sm" type="submit">Subscribe</button></form></div>
+    </aside>
+  </div>
+  <div class="notice" style="margin-top:24px"><b>How to read this:</b> ratings are indicative categories informed by public USDA Pesticide Data Program findings and widely reported annual residue rankings. Nearly all detected residues fall below legal tolerances. The rating reflects how often, and how many, residues typically appear. Washing reduces but does not remove residues. Eating more produce, organic or not, beats eating less.</div>
+</div></section>
+<section class="section alt"><div class="container" style="max-width:860px">
+  <h2>FAQ</h2>
+  <details class="faq"><summary>Does washing remove pesticides?</summary><div>Rinsing under running water removes some surface residues. Soaking in a baking-soda solution removes more for some pesticides, but systemic pesticides inside the plant tissue stay. Peeling helps but also removes nutrients.</div></details>
+  <details class="faq"><summary>Is organic produce pesticide-free?</summary><div>No. Organic farming allows a limited list of mostly natural pesticides, and drift can occur. Organic produce does consistently show far fewer and lower synthetic pesticide residues.</div></details>
+  <details class="faq"><summary>Should I avoid conventional high-risk produce entirely?</summary><div>No. The health benefits of fruits and vegetables outweigh residue risks. Use this list to prioritize organic purchases, not to eat less produce.</div></details>
+  <h3 style="margin-top:30px">Related</h3>
+  <div class="grid g3"><a class="card card-link" href="organic-budget.html"><h3>Budget Planner</h3><p>Cost of smart organic vs all-organic.</p></a><a class="card card-link" href="{{BASE}}learn/pesticide-residues-guide.html"><h3>Residues guide</h3><p>The science, explained.</p></a><a class="card card-link" href="label-decoder.html"><h3>Label Decoder</h3><p>Which organic labels to trust.</p></a></div>
+</div></section>
+</main>
