@@ -1,0 +1,47 @@
+---
+title: Lab Reports — Heavy Metals, Pesticides & Label Accuracy Tests | OrgLab
+description: Independent lab test reports on organic and conventional foods, supplements, baby food and pet food: heavy metals, pesticide residues, glyphosate and label accuracy.
+crumb: Lab Reports
+scripts: tools
+exit: 1
+priority: 0.9
+---
+<main id="main">
+<section class="page-hero"><div class="container">
+  <div class="crumbs"><a href="{{BASE}}index.html">Home</a> / Lab Reports</div>
+  <span class="eyebrow">Independent testing</span>
+  <h1>Lab Reports: what's really inside</h1>
+  <p class="lead">We buy products at retail, send them blind to ISO/IEC 17025-accredited labs, and publish everything: heavy metals, pesticide residues, glyphosate and label accuracy.</p>
+</div></section>
+<section class="section"><div class="container">
+  <div class="notice" style="margin-bottom:22px"><b>Demo dataset.</b> The reports below are illustrative placeholders that show the report format. They are <b>not</b> test results for any real brand. Live results publish as each testing round funded by <a href="{{BASE}}support.html">readers</a> completes.</div>
+  <div class="filters">
+    <input id="rep-q" type="search" placeholder="Search reports…" aria-label="Search reports">
+    <select id="rep-cat" aria-label="Category"><option value="">All categories</option><option value="protein">Protein powders</option><option value="baby">Baby food</option><option value="pantry">Pantry staples</option><option value="produce">Produce</option><option value="beverage">Beverages</option><option value="pet">Pet food</option></select>
+    <select id="rep-sort" aria-label="Sort"><option value="best">Best score first</option><option value="low">Lowest score first</option><option value="name">A–Z</option></select>
+    <span class="muted" id="rep-count"></span>
+  </div>
+  <div class="grid g3" id="reports"></div>
+  <div class="ad ad-leader" data-slot="incontent">Advertisement</div>
+  <div class="grid g2">
+    <div class="card"><span class="tag">Vote</span><h3 style="margin-top:8px">What should we test next?</h3>
+      <form class="form" data-form="test-request" data-success="Vote recorded! Supporters get results first.">
+        <select name="category" aria-label="Category" required><option value="">Choose a category…</option><option>Protein powder</option><option>Baby food</option><option>Honey</option><option>Olive oil</option><option>Rice & grains</option><option>Chocolate</option><option>Coffee & tea</option><option>Pet food</option><option>Other</option></select>
+        <input type="text" name="product" placeholder="Specific product or brand (optional)" aria-label="Product">
+        <input type="email" name="email" placeholder="Email for results (optional)" aria-label="Email">
+        <button class="btn" type="submit">Submit vote</button>
+      </form></div>
+    <div class="card" style="background:linear-gradient(140deg,#0e3b2e,#1d6b52);color:#e7f0e8;border:0"><span class="tag new">For brands</span><h3 style="color:#fff;margin-top:8px">Want your product independently tested?</h3><p>Pre-certification screening, retailer compliance, heavy-metal panels. Accredited labs, fast turnaround.</p><a class="btn btn-accent" href="{{BASE}}get-certified.html?type=testing#quote">Get lab testing quotes</a><p class="form-note" style="color:#b8cfc0;margin-top:10px">Brand-commissioned tests are never published as OrgLab editorial results.</p></div>
+  </div>
+</div></section>
+<section class="section alt"><div class="container" style="max-width:860px">
+  <h2>How we grade</h2>
+  <div class="table-wrap"><table><thead><tr><th>Grade</th><th>Score</th><th>Meaning</th></tr></thead><tbody>
+    <tr><td><span class="score a" style="width:36px;height:36px;font-size:.9rem">A</span></td><td>85–100</td><td>No residues of concern; heavy metals not detected or very low; label accurate.</td></tr>
+    <tr><td><span class="score b" style="width:36px;height:36px;font-size:.9rem">B</span></td><td>70–84</td><td>Minor findings well below reference limits.</td></tr>
+    <tr><td><span class="score c" style="width:36px;height:36px;font-size:.9rem">C</span></td><td>55–69</td><td>Notable finding (e.g., moderate metals or label shortfall). Moderate consumption advised.</td></tr>
+    <tr><td><span class="score d" style="width:36px;height:36px;font-size:.9rem">D</span></td><td>&lt;55</td><td>Multiple or significant findings.</td></tr>
+  </tbody></table></div>
+  <p style="margin-top:14px">Full methodology: <a href="{{BASE}}about.html#methodology">how we test</a>.</p>
+</div></section>
+</main>

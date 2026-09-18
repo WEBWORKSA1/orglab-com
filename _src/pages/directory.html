@@ -1,0 +1,53 @@
+---
+title: Organic Directory — Farms, CSAs, Markets & Co-ops Near You | OrgLab
+description: Find certified organic farms, CSA farm shares, farmers' markets, co-ops and organic delivery services, or list your farm in the OrgLab Organic Directory.
+crumb: Organic Directory
+priority: 0.8
+---
+<main id="main">
+<section class="page-hero"><div class="container">
+  <div class="crumbs"><a href="{{BASE}}index.html">Home</a> / Directory</div>
+  <span class="eyebrow">Buy local organic</span>
+  <h1>Organic Directory</h1>
+  <p class="lead">Farms, CSAs, farmers' markets, co-ops and delivery services, with certification status shown on every listing.</p>
+  <div class="row" style="margin-top:18px"><a class="btn btn-accent" href="#list">List your farm free</a><a class="btn btn-ghost" href="#featured">Get featured</a></div>
+</div></section>
+<section class="section"><div class="container" data-filter-list>
+  <div class="notice" style="margin-bottom:18px">The directory is launching. The listings below are <b>examples</b> that show the listing format. Submit yours to be among the first real listings.</div>
+  <div class="filters">
+    <input type="search" data-filter-q placeholder="Search by name, product or city…" aria-label="Search directory">
+    <select data-filter-key="type" aria-label="Type"><option value="">All types</option><option value="farm">Farms</option><option value="csa">CSA</option><option value="market">Farmers' markets</option><option value="coop">Co-ops</option><option value="delivery">Delivery</option></select>
+    <select data-filter-key="region" aria-label="Region"><option value="">All regions</option><option value="us-west">US West</option><option value="us-east">US East</option><option value="us-central">US Central</option><option value="canada">Canada</option><option value="intl">International</option></select>
+    <span class="muted" data-filter-count></span>
+  </div>
+  <div class="grid g3">
+    <article class="card" data-item data-type="farm csa" data-region="us-west"><span class="tag new">★ Featured</span> <span class="tag sample">Example</span><h3 style="margin-top:10px">Green Valley Organic Farm</h3><p>Mixed vegetables, berries, pastured eggs. Weekly CSA boxes, May–Nov.</p><small>Example City, CA · USDA Organic · CSA from $32/wk</small></article>
+    <article class="card" data-item data-type="market" data-region="us-east"><span class="tag sample">Example</span><h3 style="margin-top:10px">Riverside Saturday Market</h3><p>40+ vendors, 12 certified organic. Accepts SNAP/EBT.</p><small>Example Town, NY · Sat 8am–1pm</small></article>
+    <article class="card" data-item data-type="coop" data-region="us-central"><span class="tag sample">Example</span><h3 style="margin-top:10px">Prairie Roots Food Co-op</h3><p>Member-owned grocery with a strong local and organic selection.</p><small>Example, MN · Open daily</small></article>
+    <article class="card" data-item data-type="farm" data-region="canada"><span class="tag sample">Example</span><h3 style="margin-top:10px">Maple Ridge Organics</h3><p>Grass-fed beef, maple syrup, heritage grains.</p><small>Example, QC · Canada Organic (COR)</small></article>
+    <article class="card" data-item data-type="delivery" data-region="us-west us-east us-central"><span class="tag sample">Example</span><h3 style="margin-top:10px">Harvest Box Delivery</h3><p>Organic produce boxes delivered to your door.</p><small>Ships to 30+ states</small></article>
+    <article class="card" data-item data-type="farm csa" data-region="intl"><span class="tag sample">Example</span><h3 style="margin-top:10px">Coastal Spice Garden</h3><p>Organic cinnamon, pepper and tea. Farm stays available.</p><small>International · EU Organic</small></article>
+  </div>
+  <div class="ad ad-leader" data-slot="incontent">Advertisement</div>
+</div></section>
+<section class="section alt" id="list"><div class="container split">
+  <div>
+    <span class="eyebrow">For growers & sellers</span>
+    <h2>List your farm or market</h2>
+    <p class="lead">Reach local buyers who are specifically looking for organic.</p>
+    <div class="grid g2" id="featured" style="margin-top:20px">
+      <div class="card"><h3>Free listing</h3><p class="tier price" style="font-size:1.8rem;margin:6px 0">$0</p><ul class="checks"><li>Name, products, location</li><li>Certification badge</li><li>Website link</li></ul></div>
+      <div class="card tier pop"><span class="ribbon">Best value</span><h3>Featured</h3><p style="font:700 1.8rem var(--display);margin:6px 0">$19<small style="font:500 .9rem var(--font)">/mo</small></p><ul class="checks"><li>Top of search & region</li><li>Photo gallery + CSA signup link</li><li>Newsletter mention monthly</li></ul></div>
+    </div>
+  </div>
+  <form class="card form" data-form="directory-listing" data-success="Thanks! We'll review and publish your listing within 3 business days.">
+    <h3>Submit a listing</h3>
+    <div class="two"><div><label for="dl-name">Business name <span class="req">*</span></label><input id="dl-name" name="business" type="text" required></div><div><label for="dl-type">Type <span class="req">*</span></label><select id="dl-type" name="type" required><option value="">Select…</option><option>Farm</option><option>CSA</option><option>Farmers' market</option><option>Co-op</option><option>Delivery</option><option>Store / café</option></select></div></div>
+    <div class="two"><div><label for="dl-city">City / region <span class="req">*</span></label><input id="dl-city" name="city" type="text" required></div><div><label for="dl-cert">Certification</label><select id="dl-cert" name="certification"><option>USDA Organic</option><option>Canada Organic</option><option>EU Organic</option><option>Certified Naturally Grown</option><option>Transitioning</option><option>Not certified (organic practices)</option></select></div></div>
+    <div><label for="dl-prod">Products</label><input id="dl-prod" name="products" type="text" placeholder="Vegetables, eggs, honey…"></div>
+    <div class="two"><div><label for="dl-web">Website</label><input id="dl-web" name="website" type="url" placeholder="https://"></div><div><label for="dl-email">Email <span class="req">*</span></label><input id="dl-email" name="email" type="email" required></div></div>
+    <div><label for="dl-plan">Plan</label><select id="dl-plan" name="plan"><option>Free listing</option><option>Featured ($19/mo)</option></select></div>
+    <button class="btn" type="submit">Submit listing</button>
+  </form>
+</div></section>
+</main>
