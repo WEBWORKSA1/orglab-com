@@ -1,0 +1,44 @@
+{%- assign BASE = site.baseurl | append: "/" -%}
+{%- assign TODAY = site.time | date: "%Y-%m-%d" -%}
+{%- assign PAGE_URL = site.url | append: site.baseurl | append: page.url -%}
+{%- assign CRUMB = page.crumb | default: page.title -%}
+<!doctype html>
+<html lang="en" data-base="{{ BASE }}">
+<head>
+<meta charset="utf-8">
+{% if page.url == "/404.html" %}<base href="{{ BASE }}">{% endif %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page.title | escape }}</title>
+<meta name="description" content="{{ page.description | escape }}">
+{% if page.noindex %}<meta name="robots" content="noindex">
+{% endif %}<link rel="canonical" href="{{ PAGE_URL }}">
+<meta property="og:type" content="{% if page.url contains '/learn/' and page.url != '/learn/' %}article{% else %}website{% endif %}">
+<meta property="og:site_name" content="OrgLab">
+<meta property="og:title" content="{{ page.title | escape }}">
+<meta property="og:description" content="{{ page.description | escape }}">
+<meta property="og:url" content="{{ PAGE_URL }}">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#0e3b2e">
+<link rel="icon" href="{{ BASE }}assets/img/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="{{ BASE }}manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ BASE }}assets/css/style.css">
+<script>try{var t=localStorage.getItem("ol-theme");if(t)document.documentElement.dataset.theme=JSON.parse(t)}catch(e){}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"OrgLab","alternateName":"The Organic Lab","url":"{{ site.url }}{{ site.baseurl }}/","logo":"{{ site.url }}{{ site.baseurl }}/assets/img/favicon.svg"}</script>
+{% if page.url == "/" %}<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"OrgLab","url":"{{ site.url }}{{ site.baseurl }}/"}</script>
+{% else %}<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"{{ site.url }}{{ site.baseurl }}/"},{"@type":"ListItem","position":2,"name":{{ CRUMB | split: " | " | first | jsonify }},"item":"{{ PAGE_URL }}"}]}</script>
+{% endif %}</head>
+<body{% if page.exit %} data-exit{% endif %}>
+{% include partials/header.html %}
+{%- capture raw %}{% include {{ page.src }} %}{% endcapture -%}
+{%- assign parts = raw | split: "<main" -%}
+<main{{ parts | last }}
+{% include partials/footer.html %}
+<script src="{{ BASE }}assets/js/config.js"></script>
+<script src="{{ BASE }}assets/js/main.js" defer></script>
+{% if page.scripts == "tools" %}<script src="{{ BASE }}assets/js/data.js" defer></script>
+<script src="{{ BASE }}assets/js/tools.js" defer></script>
+{% endif %}</body>
+</html>

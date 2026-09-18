@@ -1,0 +1,15 @@
+# OrgLab.com: GitHub Pages (Jekyll) configuration
+# When the custom domain orglab.com is live: set url to "https://orglab.com" and baseurl to "".
+title: OrgLab
+description: "The Organic Lab: independent organic testing, free tools and organic certification quotes."
+url: "https://webworksa1.github.io"
+baseurl: "/orglab-com"
+includes_dir: _src
+plugins:
+  - jekyll-sitemap
+exclude:
+  - build.py
+  - README.md
+  - PROMPT.md
+  - Gemfile
+  - Gemfile.lock

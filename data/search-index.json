@@ -1,0 +1,5 @@
+---
+layout: null
+sitemap: false
+---
+[{% assign docs = site.pages | where_exp: "p", "p.src" | where_exp: "p", "p.noindex != true" %}{% for p in docs %}{% unless forloop.first %},{% endunless %}{"u":{{ p.url | remove_first: "/" | jsonify }},"t":{{ p.title | split: " | " | first | jsonify }},"d":{{ p.description | jsonify }},"k":{{ p.crumb | default: "" | jsonify }}}{% endfor %}]
