@@ -1,0 +1,29 @@
+---
+title: Contact OrgLab | The Organic Lab
+description: Contact OrgLab: reader questions, corrections, test requests, partnerships, press and media inquiries.
+crumb: Contact
+priority: 0.6
+---
+<main id="main">
+<section class="page-hero"><div class="container">
+  <div class="crumbs"><a href="{{BASE}}index.html">Home</a> / Contact</div>
+  <span class="eyebrow">Get in touch</span>
+  <h1>Talk to the Lab</h1>
+  <p class="lead">Questions, corrections, test requests, press or partnerships. We read everything.</p>
+</div></section>
+<section class="section"><div class="container split" style="align-items:start">
+  <form class="card form" data-form="contact" data-success="Message sent! We usually reply within 2 business days.">
+    <div class="two"><div><label for="c-name">Name <span class="req">*</span></label><input id="c-name" name="full_name" type="text" required autocomplete="name"></div><div><label for="c-email">Email <span class="req">*</span></label><input id="c-email" name="email" type="email" required autocomplete="email"></div></div>
+    <div><label for="c-topic">Topic <span class="req">*</span></label><select id="c-topic" name="topic" required><option value="">Select…</option><option>General question</option><option>Correction / error report</option><option>Test request</option><option>Certification help</option><option>Advertising & partnerships</option><option>Press & media</option><option>Careers</option><option>Other</option></select></div>
+    <div><label for="c-msg">Message <span class="req">*</span></label><textarea id="c-msg" name="message" required></textarea></div>
+    <label class="check"><input type="checkbox" name="consent" value="yes" required> I agree to OrgLab storing my message to respond to me.</label>
+    <button class="btn btn-accent" type="submit">Send message</button>
+  </form>
+  <div class="stack">
+    <div class="card"><h3>📧 Email</h3><p><a data-cfg-link="contactEmail" href="mailto:hello@orglab.com" data-cfg-text="contactEmail">hello@orglab.com</a></p></div>
+    <div class="card"><h3>🚜 Farms & brands</h3><p>The fastest route to certification help is our 60-second quote form.</p><a class="btn btn-sm" href="{{BASE}}get-certified.html#quote">Get certified</a></div>
+    <div class="card"><h3>📰 Press</h3><p>Data requests and interviews with the OrgLab Research Desk: choose “Press & media”.</p></div>
+  </div>
+</div></section>
+</main>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector('[data-cfg-link="contactEmail"]');if(a&&window.ORGLAB_CONFIG){a.href="mailto:"+ORGLAB_CONFIG.contactEmail;a.removeAttribute("target")}});</script>
