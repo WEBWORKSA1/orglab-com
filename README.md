@@ -29,28 +29,38 @@ A static website for independent organic testing, free tools and organic-certifi
 
 ## Editing and adding pages
 
-Source lives in `_src/`. On every push, the GitHub Action (`.github/workflows/build.yml`) runs `build.py` and commits the generated HTML.
+GitHub Pages builds the site automatically with Jekyll on every commit. You don't need any build step, and you can edit straight on github.com.
 
-```bash
-python3 build.py            # local build
-python3 -m http.server      # preview at http://localhost:8000
+- **Page content** lives in `_src/pages/…` (header and footer in `_src/partials/`).
+- **Routes** are small front-matter files at the root (`index.html`, `tools/*.html`, `learn/*.html` …) holding the title, description and `src:` pointer. The shared layout is `_layouts/default.html`.
+- **To add a page:** create `_src/pages/new-page.html` (start the body with `<main id="main">`), then add a root file `new-page.html` like this:
+
+```yaml
+---
+layout: default
+title: "Page title | OrgLab"
+description: "Meta description"
+src: pages/new-page.html
+scripts: tools   # optional: loads the tool scripts
+exit: true       # optional: exit-intent lead magnet
+---
 ```
 
-To add a page, create `_src/pages/your-page.html` with a front-matter block (title, description, and optionally `scripts: tools` or `exit: 1`), then push. Links use `{{BASE}}` so they work both on the github.io subpath and on the custom domain. To add tool data (produce, labels, ingredients, videos, lab reports), edit `assets/js/data.js`.
+Use `{{BASE}}` in front of internal links, for example `{{BASE}}tools/index.html`. `sitemap.xml` and `data/search-index.json` regenerate automatically. To add tool data (produce, labels, ingredients, videos, lab reports), edit `assets/js/data.js`.
 
 ## Hosting on GitHub Pages (free)
 
-Go to Settings → Pages → Source: **Deploy from a branch** → `gh-pages` (or `main`) / root. The workflow keeps the `gh-pages` branch in sync with `main`.
+Settings → Pages → Build and deployment → Source: **Deploy from a branch** → Branch: `main`, folder `/ (root)` → Save. The site goes live at https://webworksa1.github.io/orglab-com/ within about a minute.
 
 ### Custom domain (orglab.com)
 
-1. Add a `CNAME` file containing `orglab.com` (or set the domain in Settings → Pages).
+1. In Settings → Pages → Custom domain, enter `orglab.com`. In `_config.yml`, set `url: "https://orglab.com"` and `baseurl: ""`.
 2. Set these DNS records at your registrar:
    - `A` records for `@`: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
    - `CNAME` for `www`: `webworksa1.github.io`
 3. Tick **Enforce HTTPS** in Settings → Pages.
 
-Canonical URLs and the sitemap already point to `https://orglab.com`. Change `SITE_URL` in `build.py` if needed.
+Canonical URLs and the sitemap follow `url` and `baseurl` in `_config.yml`.
 
 ## Before launch: honesty checklist
 
@@ -58,3 +68,4 @@ Canonical URLs and the sitemap already point to `https://orglab.com`. Change `SI
 - Add a credentialed reviewer (RD, agronomist) to article bylines to strengthen E-E-A-T.
 - Have the contest rules and privacy policy reviewed for each jurisdiction you market to.
 - For EEA/UK visitors, use a Google-certified CMP alongside AdSense.
+- Upload a 1200×630 PNG as `assets/img/og.png` and add an `og:image` tag in `_layouts/default.html` so social shares show a preview image.
